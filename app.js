@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://joffreyG:2512AedJM2962013@cluster0.zgid3wg.mongo
         useUnifiedTopology: true
     })
     .then(() => console.log('Connexion à MongoDB réussie !'))
-    .catch(() => console.log('Connexion à MongoDB échouée !'));
+    .catch(() => console.log('error'));
 
 /*app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
