@@ -1,3 +1,4 @@
+//mongoose require for Schema method
 const mongoose = require('mongoose');
 
 const sauceSchema = mongoose.Schema({
@@ -14,4 +15,5 @@ const sauceSchema = mongoose.Schema({
     usersDisliked: { type: [String] },
 })
 
+//export Schema
 module.exports = mongoose.model("Sauce", sauceSchema)

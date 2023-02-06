@@ -1,6 +1,10 @@
+// import http package
 const http = require('http');
+
+//import app.js
 const app = require('./app');
 
+//valid port even string or number
 const normalizePort = val => {
     const port = parseInt(val, 10);
 
@@ -15,6 +19,8 @@ const normalizePort = val => {
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
+
+//manage error
 const errorHandler = error => {
     if (error.syscall !== 'listen') {
         throw error;
@@ -35,6 +41,7 @@ const errorHandler = error => {
     }
 };
 
+//method to create server
 const server = http.createServer(app);
 
 server.on('error', errorHandler);
